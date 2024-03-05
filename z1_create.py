@@ -27,3 +27,11 @@ questions_data = [
     ("Explain the concept of 'head of household' filing status.", "A) Unmarried, providing less than half of financial support.", "B) Married with dependents.", "C) Unmarried, providing more than half of financial support for a qualifying dependent.", "D) Single with no dependents.", 3),
     ("What is the Gift Tax, and how does it relate to federal taxation?", "A) Tax on all gifts, regardless of amount.", "B) Tax on gifts above a certain value; exclusions apply.", "C) Tax on gifts received by individuals.", "D) Tax on gifts, but only for high-income individuals.", 2),
 ]
+for question_data in questions_data:
+    cr.execute('''
+        INSERT INTO Taxation (question, option1, option2, option3, option4, correct_answer)
+        VALUES (?, ?, ?, ?, ?, ?);
+    ''', question_data)
+
+conn.commit()
+conn.close()
