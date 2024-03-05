@@ -2,7 +2,7 @@ import sqlite3
 conn = sqlite3.connect('Quizbowl.db')
 cr = conn.cursor()
 
-# Create the 'Taxation' table if it doesn't exist
+#Create 'Taxation' table 
 cr.execute('''
     CREATE TABLE IF NOT EXISTS Taxation (
         id INTEGER PRIMARY KEY,
@@ -35,3 +35,16 @@ for question_data in questions_data:
 
 conn.commit()
 conn.close()
+
+#Create 'Finance' table 
+cr.execute('''
+    CREATE TABLE IF NOT EXISTS Finance (
+        id INTEGER PRIMARY KEY,
+        question TEXT,
+        option1 TEXT,
+        option2 TEXT,
+        option3 TEXT,
+        option4 TEXT,
+        correct_answer TEXT
+    );
+''')
