@@ -68,3 +68,16 @@ def add_finQ(question, option1, option2, option3, option4, correct_answer):
 #add_finQ("What is a stock dividend?", "A) A cash payment to shareholders", "B) A debt instrument", "C) Additional shares of a company distributed to existing shareholders", "D) A government bond", "C")
 #add_finQ("What does the term 'bull market' refer to?", "A) A market with declining prices", "B) A market with stagnant prices", "C) A market characterized by rising prices and optimism", "D) A market with no buyers", "C")
 #add_finQ("What is the purpose of a budget?", "A) To restrict spending", "B) To allocate resources and manage finances", "C) To track past expenses", "D) To maximize debt", "B")
+    
+#Create 'Cost Accounting' table 
+cr.execute('''
+    CREATE TABLE IF NOT EXISTS CostAccounting (
+        id INTEGER PRIMARY KEY,
+        question TEXT,
+        option1 TEXT,
+        option2 TEXT,
+        option3 TEXT,
+        option4 TEXT,
+        correct_answer TEXT
+    );
+''')
