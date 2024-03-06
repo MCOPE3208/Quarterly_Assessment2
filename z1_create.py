@@ -47,4 +47,22 @@ cr.execute('''
         correct_answer TEXT
     );
 ''')
- 
+
+def add_finQ(question, option1, option2, option3, option4, correct_answer):
+    cr.execute("""
+        INSERT INTO Finance (question, option1, option2, option3, option4, correct_answer)
+        VALUES (?,?,?,?,?,?)""",(question, option1, option2, option3, option4, correct_answer)
+    ) 
+    conn.commit()
+    print("Question added :)")   
+
+add_finQ("What is the time value of money?", "A) The current value of money", "B) The future value of money", "C) The idea that money available today is worth more than the same amount in the future", "D) The concept that money will always have the same value", "C")
+add_finQ("What does ROI stand for?", "A) Return on Investment", "B) Risk of Inflation", "C) Revenue of Interest", "D) Rate of Income", "A")
+add_finQ("What is diversification in investing?", "A) Concentrating investments in a single asset", "B) Spreading investments across different assets to reduce risk", "C) Timing the market for maximum profit", "D) Avoiding investments altogether", "B")
+add_finQ("What is a 401(k)?", "A) A type of loan", "B) A retirement savings plan sponsored by employers", "C) A credit card", "D) A real estate investment", "B")
+add_finQ("What is the purpose of a credit score?", "A) To track your spending habits", "B) To determine your eligibility for loans and credit", "C) To calculate your tax liability", "D) To assess your net worth", "B")
+add_finQ("What is the Federal Reserve?", "A) A government agency that collects taxes", "B) The central banking system of the United States", "C) A stock exchange", "D) A financial advisory firm", "B")
+add_finQ("What is compound interest?", "A) Interest calculated only on the principal amount", "B) Interest calculated on the total amount, including previously earned interest", "C) A one-time interest payment", "D) Interest paid in advance", "B")
+add_finQ("What is a stock dividend?", "A) A cash payment to shareholders", "B) A debt instrument", "C) Additional shares of a company distributed to existing shareholders", "D) A government bond", "C")
+add_finQ("What does the term 'bull market' refer to?", "A) A market with declining prices", "B) A market with stagnant prices", "C) A market characterized by rising prices and optimism", "D) A market with no buyers", "C")
+add_finQ("What is the purpose of a budget?", "A) To restrict spending", "B) To allocate resources and manage finances", "C) To track past expenses", "D) To maximize debt", "B")
