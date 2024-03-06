@@ -34,3 +34,17 @@ def add_taxQ(question, option1, option2, option3, option4, correct_answer):
 #add_taxQ("What is the purpose of IRS Form 1099?", "A) Report income for employees.", "B) Calculate self-employment tax.", "C) Report various types of income.", "D) Claim tax deductions.", "C")
 #add_taxQ("Explain the concept of 'head of household' filing status.", "A) Unmarried, providing less than half of financial support.", "B) Married with dependents.", "C) Unmarried, providing more than half of financial support for a qualifying dependent.", "D) Single with no dependents.", "C")
 #add_taxQ("What is the Gift Tax, and how does it relate to federal taxation?", "A) Tax on all gifts, regardless of amount.", "B) Tax on gifts above a certain value; exclusions apply.", "C) Tax on gifts received by individuals.", "D) Tax on gifts, but only for high-income individuals.", "B")
+    
+#Create 'Finance' table 
+cr.execute('''
+    CREATE TABLE IF NOT EXISTS Finance (
+        id INTEGER PRIMARY KEY,
+        question TEXT,
+        option1 TEXT,
+        option2 TEXT,
+        option3 TEXT,
+        option4 TEXT,
+        correct_answer TEXT
+    );
+''')
+ 
