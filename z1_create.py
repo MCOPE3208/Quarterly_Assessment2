@@ -81,3 +81,22 @@ cr.execute('''
         correct_answer TEXT
     );
 ''')
+
+def add_costQ(question, option1, option2, option3, option4, correct_answer):
+    cr.execute("""
+        INSERT INTO CostAccounting (question, option1, option2, option3, option4, correct_answer)
+        VALUES (?,?,?,?,?,?)""",(question, option1, option2, option3, option4, correct_answer)
+    ) 
+    conn.commit()
+    print("Question added :)") 
+
+add_costQ("What is the definition of direct costs in cost accounting?", "A) Costs that can be traced directly to a specific product or service", "B) Overhead costs", "C) Indirect labor costs", "D) Fixed costs", "A")
+add_costQ("What is the purpose of a cost allocation in accounting?", "A) To reduce overall costs", "B) To assign indirect costs to specific cost objects", "C) To calculate fixed costs", "D) To increase variable costs", "B")
+add_costQ("What is contribution margin?", "A) The difference between total sales and total expenses", "B) The ratio of variable costs to fixed costs", "C) The difference between variable costs and fixed costs", "D) The ratio of net income to total revenue", "C")
+add_costQ("What is the formula for calculating the break-even point?", "A) Fixed Costs / Contribution Margin", "B) Variable Costs / Contribution Margin", "C) Total Revenue - Total Costs", "D) Fixed Costs / (Selling Price per Unit - Variable Costs per Unit)", "D")
+add_costQ("What is the difference between absorption costing and variable costing?", "A) Absorption costing includes only variable manufacturing costs.", "B) Variable costing includes only variable manufacturing costs.", "C) Absorption costing includes all manufacturing costs.", "D) Variable costing includes all manufacturing costs.", "C")
+add_costQ("What is the significance of the cost of goods sold (COGS) in financial statements?", "A) Represents the total costs incurred by a business", "B) Represents the cost of manufacturing goods that were sold during a specific period", "C) Represents the total revenue earned by a business", "D) Represents the net income of a business", "B")
+add_costQ("What is the difference between direct labor costs and direct material costs?", "A) Direct labor costs include the cost of raw materials.", "B) Direct material costs include the cost of labor.", "C) Direct labor costs are associated with employees who work directly on the product.", "D) Direct material costs are associated with employees who work directly on the product.", "C")
+add_costQ("What is a standard cost in cost accounting?", "A) The actual cost incurred for a product or service.", "B) The budgeted cost for a product or service.", "C) The historical cost of producing a product or service.", "D) The selling price of a product or service.", "B")
+add_costQ("What is the purpose of variance analysis in cost accounting?", "A) To identify the reasons for deviations from the budgeted costs.", "B) To increase the overall costs of production.", "C) To reduce the total costs of production.", "D) To calculate fixed costs.", "A")
+add_costQ("What is the difference between variable costs and fixed costs?", "A) Variable costs remain constant per unit, while fixed costs vary with production volume.", "B) Variable costs vary with production volume, while fixed costs remain constant per unit.", "C) Both variable and fixed costs vary with production volume.", "D) Both variable and fixed costs remain constant per unit.", "B")
