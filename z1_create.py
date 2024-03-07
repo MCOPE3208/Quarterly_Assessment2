@@ -105,7 +105,7 @@ def add_costQ(question, option1, option2, option3, option4, correct_answer):
     
 #Create 'Financial Accounting' table 
 cr.execute('''
-    CREATE TABLE IF NOT EXISTS CostAccounting (
+    CREATE TABLE IF NOT EXISTS FinancialAccounting (
         id INTEGER PRIMARY KEY,
         question TEXT,
         option1 TEXT,
@@ -115,3 +115,22 @@ cr.execute('''
         correct_answer TEXT
     );
 ''')
+
+def add_finanQ(question, option1, option2, option3, option4, correct_answer):
+    cr.execute("""
+        INSERT INTO FinancialAccounting (question, option1, option2, option3, option4, correct_answer)
+        VALUES (?,?,?,?,?,?)""",(question, option1, option2, option3, option4, correct_answer)
+    ) 
+    conn.commit()
+    print("Question added :)")
+
+add_finanQ("What is the purpose of the income statement in financial accounting?", "A) To show the financial position of a company at a specific point in time.", "B) To report the changes in a company's financial position over a period of time.", "C) To detail a company's assets, liabilities, and equity.", "D) To calculate the return on investment for shareholders.", "B")
+add_finanQ("What is the accounting equation?", "A) Assets = Liabilities - Equity", "B) Assets + Liabilities = Equity", "C) Assets = Liabilities + Equity", "D) Assets - Liabilities = Equity", "C")
+add_finanQ("What is the purpose of the balance sheet in financial accounting?", "A) To show the revenues and expenses of a company.", "B) To report the cash flows of a company.", "C) To provide a snapshot of a company's financial position at a specific point in time.", "D) To calculate the net income of a company.", "C")
+add_finanQ("What is depreciation?", "A) An increase in the value of an asset.", "B) The process of allocating the cost of an asset over its useful life.", "C) A decrease in the value of an asset.", "D) The cost of purchasing a new asset.", "B")
+add_finanQ("How does the matching principle in accounting relate to expenses?", "A) Expenses are recognized when incurred, regardless of when the related revenue is recognized.", "B) Expenses are recognized only when the related revenue is recognized.", "C) Expenses are recognized at the end of the accounting period.", "D) Expenses are recognized only if the company is profitable.", "A")
+add_finanQ("What is the purpose of the statement of cash flows?", "A) To show the revenues and expenses of a company.", "B) To report the changes in a company's financial position over a period of time.", "C) To provide details on a company's cash inflows and outflows.", "D) To calculate the return on investment for shareholders.", "C")
+add_finanQ("What is the difference between accrued revenue and accrued expenses?", "A) Accrued revenue is money owed by the company, while accrued expenses are amounts the company owes.", "B) Accrued revenue is recognized when earned, while accrued expenses are recognized when paid.", "C) Accrued revenue is recognized when paid, while accrued expenses are recognized when incurred.", "D) Accrued revenue is money owed to the company, while accrued expenses are amounts the company owes.", "A")
+add_finanQ("What is the purpose of the statement of retained earnings?", "A) To provide details on a company's cash inflows and outflows.", "B) To show the changes in a company's equity over a period of time.", "C) To report the cost of goods sold.", "D) To calculate the return on investment for shareholders.", "B")
+add_finanQ("What is goodwill in financial accounting?", "A) The value of a company's tangible assets.", "B) The excess of the purchase price over the fair value of net assets acquired in a business combination.", "C) The total revenues earned by a company.", "D) The cost of goods sold.", "B")
+add_finanQ("What is the role of an auditor in financial accounting?", "A) To prepare financial statements for a company.", "B) To verify the accuracy and completeness of a company's financial statements.", "C) To calculate a company's tax liability.", "D) To manage a company's internal control systems.", "B")
