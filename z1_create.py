@@ -149,3 +149,22 @@ cr.execute('''
         correct_answer TEXT
     );
 ''')
+
+def add_busanaQ(question, option1, option2, option3, option4, correct_answer):
+    cr.execute("""
+        INSERT INTO BusinessAnalytics (question, option1, option2, option3, option4, correct_answer)
+        VALUES (?,?,?,?,?,?)""",(question, option1, option2, option3, option4, correct_answer)
+    ) 
+    conn.commit()
+    print("Question added :)")
+
+add_busanaQ("What is descriptive analytics?", "A) Predicting future outcomes based on historical data.", "B) Analyzing current data to understand what has happened.", "C) Identifying patterns and trends in data.", "D) Prescribing actions based on data insights.", "B")
+add_busanaQ("What is the purpose of predictive analytics?", "A) Understanding historical data patterns.", "B) Identifying patterns and trends in data.", "C) Forecasting future outcomes based on historical data.", "D) Describing the current state of a business.", "C")
+add_busanaQ("What is data mining in the context of business analytics?", "A) Extracting valuable insights from unstructured data.", "B) Storing large volumes of data for future analysis.", "C) Cleaning and organizing data for analysis.", "D) Discovering patterns and relationships in large datasets.", "D")
+add_busanaQ("What is A/B testing used for in business analytics?", "A) Analyzing customer demographics.", "B) Evaluating the effectiveness of different versions of a webpage or marketing campaign.", "C) Forecasting future sales.", "D) Identifying outliers in a dataset.", "B")
+add_busanaQ("What is the role of a key performance indicator (KPI) in business analytics?", "A) Identifying patterns and trends in data.", "B) Setting goals and measuring performance against objectives.", "C) Analyzing customer behavior.", "D) Cleaning and organizing data for analysis.", "B")
+add_busanaQ("What is prescriptive analytics?", "A) Analyzing current data to understand what has happened.", "B) Predicting future outcomes based on historical data.", "C) Recommending actions to optimize future outcomes.", "D) Identifying patterns and trends in data.", "C")
+add_busanaQ("What is regression analysis used for in business analytics?", "A) Forecasting future outcomes based on historical data.", "B) Evaluating the effectiveness of marketing campaigns.", "C) Identifying outliers in a dataset.", "D) Analyzing customer demographics.", "A")
+add_busanaQ("What is the importance of data visualization in business analytics?", "A) Storing large volumes of data for future analysis.", "B) Transforming unstructured data into a structured format.", "C) Communicating insights and trends effectively through charts and graphs.", "D) Forecasting future outcomes based on historical data.", "C")
+add_busanaQ("What is the concept of 'big data' in business analytics?", "A) Small datasets with minimal impact on analysis.", "B) The process of organizing and cleaning data.", "C) Extremely large and complex datasets that traditional data processing methods struggle to handle.", "D) Predicting future outcomes based on historical data.", "C")
+add_busanaQ("What is machine learning in the context of business analytics?", "A) Analyzing current data to understand what has happened.", "B) A statistical technique for identifying patterns and making predictions.", "C) Describing the current state of a business.", "D) Evaluating the effectiveness of marketing campaigns.", "B")
