@@ -136,3 +136,16 @@ def add_finanQ(question, option1, option2, option3, option4, correct_answer):
 #add_finanQ("What is the purpose of the statement of retained earnings?", "A) To provide details on a company's cash inflows and outflows.", "B) To show the changes in a company's equity over a period of time.", "C) To report the cost of goods sold.", "D) To calculate the return on investment for shareholders.", "B")
 #add_finanQ("What is goodwill in financial accounting?", "A) The value of a company's tangible assets.", "B) The excess of the purchase price over the fair value of net assets acquired in a business combination.", "C) The total revenues earned by a company.", "D) The cost of goods sold.", "B")
 #add_finanQ("What is the role of an auditor in financial accounting?", "A) To prepare financial statements for a company.", "B) To verify the accuracy and completeness of a company's financial statements.", "C) To calculate a company's tax liability.", "D) To manage a company's internal control systems.", "B")
+    
+#Create 'Business Analytics' table 
+cr.execute('''
+    CREATE TABLE IF NOT EXISTS BusinessAnalytics (
+        id INTEGER PRIMARY KEY,
+        question TEXT,
+        option1 TEXT,
+        option2 TEXT,
+        option3 TEXT,
+        option4 TEXT,
+        correct_answer TEXT
+    );
+''')
