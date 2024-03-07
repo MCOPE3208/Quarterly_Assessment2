@@ -102,3 +102,16 @@ def add_costQ(question, option1, option2, option3, option4, correct_answer):
 #add_costQ("What is a standard cost in cost accounting?", "A) The actual cost incurred for a product or service.", "B) The budgeted cost for a product or service.", "C) The historical cost of producing a product or service.", "D) The selling price of a product or service.", "B")
 #add_costQ("What is the purpose of variance analysis in cost accounting?", "A) To identify the reasons for deviations from the budgeted costs.", "B) To increase the overall costs of production.", "C) To reduce the total costs of production.", "D) To calculate fixed costs.", "A")
 #add_costQ("What is the difference between variable costs and fixed costs?", "A) Variable costs remain constant per unit, while fixed costs vary with production volume.", "B) Variable costs vary with production volume, while fixed costs remain constant per unit.", "C) Both variable and fixed costs vary with production volume.", "D) Both variable and fixed costs remain constant per unit.", "B")
+    
+#Create 'Financial Accounting' table 
+cr.execute('''
+    CREATE TABLE IF NOT EXISTS CostAccounting (
+        id INTEGER PRIMARY KEY,
+        question TEXT,
+        option1 TEXT,
+        option2 TEXT,
+        option3 TEXT,
+        option4 TEXT,
+        correct_answer TEXT
+    );
+''')
