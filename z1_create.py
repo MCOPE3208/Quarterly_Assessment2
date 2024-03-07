@@ -182,3 +182,23 @@ cr.execute('''
         correct_answer TEXT
     );
 ''')
+
+def add_appdevQ(question, option1, option2, option3, option4, correct_answer):
+    cr.execute("""
+        INSERT INTO BusinessAppDev (question, option1, option2, option3, option4, correct_answer)
+        VALUES (?,?,?,?,?,?)""",(question, option1, option2, option3, option4, correct_answer)
+    ) 
+    conn.commit()
+    print("Question added :)")
+
+add_appdevQ("What does the 'print' function do in Python?", "A) Takes user input", "B) Displays output to the console", "C) Performs mathematical calculations", "D) Defines a variable", "B")
+add_appdevQ("How do you declare a variable in Python?", "A) var x = 5", "B) x = 5", "C) int x = 5", "D) declare x = 5", "B")
+add_appdevQ("What is the purpose of 'if' statements in Python?", "A) Looping through a sequence of elements", "B) Defining functions", "C) Handling conditions and making decisions", "D) Printing text to the console", "C")
+add_appdevQ("How do you comment out a single line of code in Python?", "A) /* This is a comment */", "B) # This is a comment", "C) // This is a comment", "D) <!-- This is a comment -->", "B")
+add_appdevQ("What is the difference between '==' and 'is' in Python?", "A) They are interchangeable", "B) '==' checks for value equality, 'is' checks for object identity", "C) '==' checks for object identity, 'is' checks for value equality", "D) Both are used for looping", "B")
+add_appdevQ("What is the purpose of the 'for' loop in Python?", "A) Executing a block of code repeatedly while a condition is true", "B) Looping through a sequence of elements a specific number of times", "C) Defining functions", "D) Handling conditions and making decisions", "B")
+add_appdevQ("What does the 'len()' function do in Python?", "A) Calculates the square root of a number", "B) Returns the largest element in a list", "C) Returns the length of a sequence or collection", "D) Rounds a floating-point number to the nearest integer", "C")
+add_appdevQ("How do you define a function in Python?", "A) func my_function():", "B) function my_function():", "C) def my_function():", "D) define my_function():", "C")
+add_appdevQ("What is the purpose of 'return' in a function?", "A) Print a value to the console", "B) Stop the execution of the program", "C) Return a value from a function", "D) Define a variable", "C")
+add_appdevQ("What is the Python 'None' object used for?", "A) Representing an empty string", "B) Indicating the end of a program", "C) Representing the absence of a value or a null value", "D) Defining a boolean variable", "C")
+
