@@ -170,3 +170,15 @@ def add_busanaQ(question, option1, option2, option3, option4, correct_answer):
 #add_busanaQ("What is the importance of data visualization in business analytics?", "A) Storing large volumes of data for future analysis.", "B) Transforming unstructured data into a structured format.", "C) Communicating insights and trends effectively through charts and graphs.", "D) Forecasting future outcomes based on historical data.", "C")
 #add_busanaQ("What is the concept of 'big data' in business analytics?", "A) Small datasets with minimal impact on analysis.", "B) The process of organizing and cleaning data.", "C) Extremely large and complex datasets that traditional data processing methods struggle to handle.", "D) Predicting future outcomes based on historical data.", "C")
 #add_busanaQ("What is machine learning in the context of business analytics?", "A) Analyzing current data to understand what has happened.", "B) A statistical technique for identifying patterns and making predictions.", "C) Describing the current state of a business.", "D) Evaluating the effectiveness of marketing campaigns.", "B")
+    
+cr.execute('''
+    CREATE TABLE IF NOT EXISTS BusinessAppDev (
+        id INTEGER PRIMARY KEY,
+        question TEXT,
+        option1 TEXT,
+        option2 TEXT,
+        option3 TEXT,
+        option4 TEXT,
+        correct_answer TEXT
+    );
+''')
