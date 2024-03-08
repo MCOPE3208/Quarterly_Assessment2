@@ -22,19 +22,11 @@ def add_taxQ(question, option1, option2, option3, option4, correct_answer):
     conn.commit()
     print("Question added :)")
 
-#this is the template to add more questions to tax as well as a list for all the questions that have already been added.
-
-#add_taxQ("What is the deadline for filing individual federal income tax returns?", "A) March 15th", "B) April 1st", "C) April 15th", "D) May 1st", "C")
-#add_taxQ("What is the purpose of Form W-4 in the context of federal income taxes?", "A) Reporting income", "B) Calculating tax owed", "C) Indicating withholding preferences", "D) Claiming tax credits", "C")
-#add_taxQ("What is the standard deduction for a single taxpayer in the 2022 tax year?", "A) $10,000", "B) $12,550", "C) $15,000", "D) $20,000", "B")
-#add_taxQ("Explain the difference between a tax credit and a tax deduction.", "A) Deductions reduce taxable income; credits directly reduce taxes owed.", "B) Deductions directly reduce taxes owed; credits reduce taxable income.", "C) Both deductions and credits reduce taxable income.", "D) Deductions and credits have the same impact on taxes.", "A")
-#add_taxQ("What is the Social Security tax rate for employees in 2022?", "A) 4.2%", "B) 6.2%", "C) 8.0%", "D) 10.0%", "B")
-#add_taxQ("What is the Alternative Minimum Tax (AMT), and who is it designed to affect?", "A) A tax on minimum income; affects all taxpayers.", "B) A tax on alternative income; affects low-income individuals.", "C) A parallel tax system; affects high-income individuals and corporations.", "D) A tax credit for alternative energy; affects all taxpayers.", "C")
-#add_taxQ("How are capital gains taxed at the federal level?", "A) Flat rate regardless of holding period.", "B) Taxed at a higher rate for short-term gains.", "C) Taxed at a higher rate for long-term gains.", "D) Exempt from federal taxes.", "B")
-#add_taxQ("What is the purpose of IRS Form 1099?", "A) Report income for employees.", "B) Calculate self-employment tax.", "C) Report various types of income.", "D) Claim tax deductions.", "C")
-#add_taxQ("Explain the concept of 'head of household' filing status.", "A) Unmarried, providing less than half of financial support.", "B) Married with dependents.", "C) Unmarried, providing more than half of financial support for a qualifying dependent.", "D) Single with no dependents.", "C")
-#add_taxQ("What is the Gift Tax, and how does it relate to federal taxation?", "A) Tax on all gifts, regardless of amount.", "B) Tax on gifts above a certain value; exclusions apply.", "C) Tax on gifts received by individuals.", "D) Tax on gifts, but only for high-income individuals.", "B")
+#this is the template to add more questions to tax 
     
+#add_taxQ("What is the deadline for filing individual federal income tax returns?", "A) March 15th", "B) April 1st", "C) April 15th", "D) May 1st", "C")
+
+
 #Create 'Finance' table 
 cr.execute('''
     CREATE TABLE IF NOT EXISTS Finance (
@@ -56,18 +48,10 @@ def add_finQ(question, option1, option2, option3, option4, correct_answer):
     conn.commit()
     print("Question added :)")   
 
-#this is the template to add more questions to finance as well as a list for all the questions that have already been added.
+#this is the template to add more questions to finance 
 
 #add_finQ("What is the time value of money?", "A) The current value of money", "B) The future value of money", "C) The idea that money available today is worth more than the same amount in the future", "D) The concept that money will always have the same value", "C")
-#add_finQ("What does ROI stand for?", "A) Return on Investment", "B) Risk of Inflation", "C) Revenue of Interest", "D) Rate of Income", "A")
-#add_finQ("What is diversification in investing?", "A) Concentrating investments in a single asset", "B) Spreading investments across different assets to reduce risk", "C) Timing the market for maximum profit", "D) Avoiding investments altogether", "B")
-#add_finQ("What is a 401(k)?", "A) A type of loan", "B) A retirement savings plan sponsored by employers", "C) A credit card", "D) A real estate investment", "B")
-#add_finQ("What is the purpose of a credit score?", "A) To track your spending habits", "B) To determine your eligibility for loans and credit", "C) To calculate your tax liability", "D) To assess your net worth", "B")
-#add_finQ("What is the Federal Reserve?", "A) A government agency that collects taxes", "B) The central banking system of the United States", "C) A stock exchange", "D) A financial advisory firm", "B")
-#add_finQ("What is compound interest?", "A) Interest calculated only on the principal amount", "B) Interest calculated on the total amount, including previously earned interest", "C) A one-time interest payment", "D) Interest paid in advance", "B")
-#add_finQ("What is a stock dividend?", "A) A cash payment to shareholders", "B) A debt instrument", "C) Additional shares of a company distributed to existing shareholders", "D) A government bond", "C")
-#add_finQ("What does the term 'bull market' refer to?", "A) A market with declining prices", "B) A market with stagnant prices", "C) A market characterized by rising prices and optimism", "D) A market with no buyers", "C")
-#add_finQ("What is the purpose of a budget?", "A) To restrict spending", "B) To allocate resources and manage finances", "C) To track past expenses", "D) To maximize debt", "B")
+
     
 #Create 'Cost Accounting' table 
 cr.execute('''
@@ -90,19 +74,11 @@ def add_costQ(question, option1, option2, option3, option4, correct_answer):
     conn.commit()
     print("Question added :)") 
 
-#this is the template to add more questions to Cost Accounting as well as a list for all the questions that have already been added.
+#this is the template to add more questions to Cost Accounting 
 
 #add_costQ("What is the definition of direct costs in cost accounting?", "A) Costs that can be traced directly to a specific product or service", "B) Overhead costs", "C) Indirect labor costs", "D) Fixed costs", "A")
-#add_costQ("What is the purpose of a cost allocation in accounting?", "A) To reduce overall costs", "B) To assign indirect costs to specific cost objects", "C) To calculate fixed costs", "D) To increase variable costs", "B")
-#add_costQ("What is contribution margin?", "A) The difference between total sales and total expenses", "B) The ratio of variable costs to fixed costs", "C) The difference between variable costs and fixed costs", "D) The ratio of net income to total revenue", "C")
-#add_costQ("What is the formula for calculating the break-even point?", "A) Fixed Costs / Contribution Margin", "B) Variable Costs / Contribution Margin", "C) Total Revenue - Total Costs", "D) Fixed Costs / (Selling Price per Unit - Variable Costs per Unit)", "D")
-#add_costQ("What is the difference between absorption costing and variable costing?", "A) Absorption costing includes only variable manufacturing costs.", "B) Variable costing includes only variable manufacturing costs.", "C) Absorption costing includes all manufacturing costs.", "D) Variable costing includes all manufacturing costs.", "C")
-#add_costQ("What is the significance of the cost of goods sold (COGS) in financial statements?", "A) Represents the total costs incurred by a business", "B) Represents the cost of manufacturing goods that were sold during a specific period", "C) Represents the total revenue earned by a business", "D) Represents the net income of a business", "B")
-#add_costQ("What is the difference between direct labor costs and direct material costs?", "A) Direct labor costs include the cost of raw materials.", "B) Direct material costs include the cost of labor.", "C) Direct labor costs are associated with employees who work directly on the product.", "D) Direct material costs are associated with employees who work directly on the product.", "C")
-#add_costQ("What is a standard cost in cost accounting?", "A) The actual cost incurred for a product or service.", "B) The budgeted cost for a product or service.", "C) The historical cost of producing a product or service.", "D) The selling price of a product or service.", "B")
-#add_costQ("What is the purpose of variance analysis in cost accounting?", "A) To identify the reasons for deviations from the budgeted costs.", "B) To increase the overall costs of production.", "C) To reduce the total costs of production.", "D) To calculate fixed costs.", "A")
-#add_costQ("What is the difference between variable costs and fixed costs?", "A) Variable costs remain constant per unit, while fixed costs vary with production volume.", "B) Variable costs vary with production volume, while fixed costs remain constant per unit.", "C) Both variable and fixed costs vary with production volume.", "D) Both variable and fixed costs remain constant per unit.", "B")
-    
+
+
 #Create 'Financial Accounting' table 
 cr.execute('''
     CREATE TABLE IF NOT EXISTS FinancialAccounting (
@@ -124,18 +100,10 @@ def add_finanQ(question, option1, option2, option3, option4, correct_answer):
     conn.commit()
     print("Question added :)")
 
-#this is the template to add more questions to Financial Accounting as well as a list for all the questions that have already been added.
+#this is the template to add more questions to Financial Accounting 
 
 #add_finanQ("What is the purpose of the income statement in financial accounting?", "A) To show the financial position of a company at a specific point in time.", "B) To report the changes in a company's financial position over a period of time.", "C) To detail a company's assets, liabilities, and equity.", "D) To calculate the return on investment for shareholders.", "B")
-#add_finanQ("What is the accounting equation?", "A) Assets = Liabilities - Equity", "B) Assets + Liabilities = Equity", "C) Assets = Liabilities + Equity", "D) Assets - Liabilities = Equity", "C")
-#add_finanQ("What is the purpose of the balance sheet in financial accounting?", "A) To show the revenues and expenses of a company.", "B) To report the cash flows of a company.", "C) To provide a snapshot of a company's financial position at a specific point in time.", "D) To calculate the net income of a company.", "C")
-#add_finanQ("What is depreciation?", "A) An increase in the value of an asset.", "B) The process of allocating the cost of an asset over its useful life.", "C) A decrease in the value of an asset.", "D) The cost of purchasing a new asset.", "B")
-#add_finanQ("How does the matching principle in accounting relate to expenses?", "A) Expenses are recognized when incurred, regardless of when the related revenue is recognized.", "B) Expenses are recognized only when the related revenue is recognized.", "C) Expenses are recognized at the end of the accounting period.", "D) Expenses are recognized only if the company is profitable.", "A")
-#add_finanQ("What is the purpose of the statement of cash flows?", "A) To show the revenues and expenses of a company.", "B) To report the changes in a company's financial position over a period of time.", "C) To provide details on a company's cash inflows and outflows.", "D) To calculate the return on investment for shareholders.", "C")
-#add_finanQ("What is the difference between accrued revenue and accrued expenses?", "A) Accrued revenue is money owed by the company, while accrued expenses are amounts the company owes.", "B) Accrued revenue is recognized when earned, while accrued expenses are recognized when paid.", "C) Accrued revenue is recognized when paid, while accrued expenses are recognized when incurred.", "D) Accrued revenue is money owed to the company, while accrued expenses are amounts the company owes.", "A")
-#add_finanQ("What is the purpose of the statement of retained earnings?", "A) To provide details on a company's cash inflows and outflows.", "B) To show the changes in a company's equity over a period of time.", "C) To report the cost of goods sold.", "D) To calculate the return on investment for shareholders.", "B")
-#add_finanQ("What is goodwill in financial accounting?", "A) The value of a company's tangible assets.", "B) The excess of the purchase price over the fair value of net assets acquired in a business combination.", "C) The total revenues earned by a company.", "D) The cost of goods sold.", "B")
-#add_finanQ("What is the role of an auditor in financial accounting?", "A) To prepare financial statements for a company.", "B) To verify the accuracy and completeness of a company's financial statements.", "C) To calculate a company's tax liability.", "D) To manage a company's internal control systems.", "B")
+
     
 #Create 'Business Analytics' table 
 cr.execute('''
@@ -158,18 +126,10 @@ def add_busanaQ(question, option1, option2, option3, option4, correct_answer):
     conn.commit()
     print("Question added :)")
 
-#this is the template to add more questions to Business Analytics as well as a list for all the questions that have already been added.
+#this is the template to add more questions to Business Analytics 
 
 #add_busanaQ("What is descriptive analytics?", "A) Predicting future outcomes based on historical data.", "B) Analyzing current data to understand what has happened.", "C) Identifying patterns and trends in data.", "D) Prescribing actions based on data insights.", "B")
-#add_busanaQ("What is the purpose of predictive analytics?", "A) Understanding historical data patterns.", "B) Identifying patterns and trends in data.", "C) Forecasting future outcomes based on historical data.", "D) Describing the current state of a business.", "C")
-#add_busanaQ("What is data mining in the context of business analytics?", "A) Extracting valuable insights from unstructured data.", "B) Storing large volumes of data for future analysis.", "C) Cleaning and organizing data for analysis.", "D) Discovering patterns and relationships in large datasets.", "D")
-#add_busanaQ("What is A/B testing used for in business analytics?", "A) Analyzing customer demographics.", "B) Evaluating the effectiveness of different versions of a webpage or marketing campaign.", "C) Forecasting future sales.", "D) Identifying outliers in a dataset.", "B")
-#add_busanaQ("What is the role of a key performance indicator (KPI) in business analytics?", "A) Identifying patterns and trends in data.", "B) Setting goals and measuring performance against objectives.", "C) Analyzing customer behavior.", "D) Cleaning and organizing data for analysis.", "B")
-#add_busanaQ("What is prescriptive analytics?", "A) Analyzing current data to understand what has happened.", "B) Predicting future outcomes based on historical data.", "C) Recommending actions to optimize future outcomes.", "D) Identifying patterns and trends in data.", "C")
-#add_busanaQ("What is regression analysis used for in business analytics?", "A) Forecasting future outcomes based on historical data.", "B) Evaluating the effectiveness of marketing campaigns.", "C) Identifying outliers in a dataset.", "D) Analyzing customer demographics.", "A")
-#add_busanaQ("What is the importance of data visualization in business analytics?", "A) Storing large volumes of data for future analysis.", "B) Transforming unstructured data into a structured format.", "C) Communicating insights and trends effectively through charts and graphs.", "D) Forecasting future outcomes based on historical data.", "C")
-#add_busanaQ("What is the concept of 'big data' in business analytics?", "A) Small datasets with minimal impact on analysis.", "B) The process of organizing and cleaning data.", "C) Extremely large and complex datasets that traditional data processing methods struggle to handle.", "D) Predicting future outcomes based on historical data.", "C")
-#add_busanaQ("What is machine learning in the context of business analytics?", "A) Analyzing current data to understand what has happened.", "B) A statistical technique for identifying patterns and making predictions.", "C) Describing the current state of a business.", "D) Evaluating the effectiveness of marketing campaigns.", "B")
+
     
 cr.execute('''
     CREATE TABLE IF NOT EXISTS BusinessAppDev (
@@ -191,16 +151,8 @@ def add_appdevQ(question, option1, option2, option3, option4, correct_answer):
     conn.commit()
     print("Question added :)")
 
-#this is the template to add more questions to Business App Development as well as a list for all the questions that have already been added.
+#this is the template to add more questions to Business App Development 
 
 #add_appdevQ("What does the 'print' function do in Python?", "A) Takes user input", "B) Displays output to the console", "C) Performs mathematical calculations", "D) Defines a variable", "B")
-#add_appdevQ("How do you declare a variable in Python?", "A) var x = 5", "B) x = 5", "C) int x = 5", "D) declare x = 5", "B")
-#add_appdevQ("What is the purpose of 'if' statements in Python?", "A) Looping through a sequence of elements", "B) Defining functions", "C) Handling conditions and making decisions", "D) Printing text to the console", "C")
-#add_appdevQ("How do you comment out a single line of code in Python?", "A) /* This is a comment */", "B) # This is a comment", "C) // This is a comment", "D) <!-- This is a comment -->", "B")
-#add_appdevQ("What is the difference between '==' and 'is' in Python?", "A) They are interchangeable", "B) '==' checks for value equality, 'is' checks for object identity", "C) '==' checks for object identity, 'is' checks for value equality", "D) Both are used for looping", "B")
-#add_appdevQ("What is the purpose of the 'for' loop in Python?", "A) Executing a block of code repeatedly while a condition is true", "B) Looping through a sequence of elements a specific number of times", "C) Defining functions", "D) Handling conditions and making decisions", "B")
-#add_appdevQ("What does the 'len()' function do in Python?", "A) Calculates the square root of a number", "B) Returns the largest element in a list", "C) Returns the length of a sequence or collection", "D) Rounds a floating-point number to the nearest integer", "C")
-#add_appdevQ("How do you define a function in Python?", "A) func my_function():", "B) function my_function():", "C) def my_function():", "D) define my_function():", "C")
-#add_appdevQ("What is the purpose of 'return' in a function?", "A) Print a value to the console", "B) Stop the execution of the program", "C) Return a value from a function", "D) Define a variable", "C")
-#add_appdevQ("What is the Python 'None' object used for?", "A) Representing an empty string", "B) Indicating the end of a program", "C) Representing the absence of a value or a null value", "D) Defining a boolean variable", "C")
-
+    
+    
