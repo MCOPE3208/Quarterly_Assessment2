@@ -57,3 +57,38 @@ def choose_table():
         return "BusinessAppDev"
     # Add more choices for other tables
 
+def quiz_bowl():
+    try:
+        # Connect to the SQLite database
+        connection = sqlite3.connect("Quizbowl.db")
+        cursor = connection.cursor()
+
+        table_name = choose_table()
+        used_question_ids = set()  # Keep track of used question IDs
+
+        score = 0
+        num_questions = 10  # You can change this to the desired number of questions
+
+        for _ in range(num_questions):
+            current_question = fetch_random_question(cursor, table_name, used_question_ids)
+
+            if current_question:
+                display_question(current_question)
+                user_answer = input("Your answer (enter the option letter): ")
+
+                if check_answer(user_answer, current_question["correct_answer"]):
+                    print(GREEN + "Correct!\n" + RESET)
+                    score += 1
+                else:
+                    print(RED + f"Incorrect! The correct answer is {current_question['correct_answer']}\n" + RESET)
+
+        print(f"You answered {score} out of {num_questions} questions correctly.")
+
+    except sqlite3.Error as e:
+        print("Error:", e)
+
+    finally:
+        connection.close()
+
+if __name__ == "__main__":
+    quiz_bowl()
