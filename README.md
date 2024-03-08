@@ -1,1 +1,4 @@
 # Quarterly_Assessment2
+Overview of Quizbowl
+
+To run the quizbowl project, start by navigating to the directory containing the project files. Once there you need to only select the file z3_app.py in order to use the quizbowl program. After selecting the app file you will need to follow the on-screen instructions to choose a quiz category by entering the corresponding number for options like "Taxation," "Finance," and more. Once selected, the application will fetch a set number of random questions from the chosen category. Answer each question by entering the option letter (e.g., A, B, C, or D). After completing the quiz, the application will display your score, indicating the number of correctly answered questions out of the total. The project ensures proper resource management by automatically closing the database connection upon completion. If you encounter any issues, review these steps and ensure Python is installed on your system.
