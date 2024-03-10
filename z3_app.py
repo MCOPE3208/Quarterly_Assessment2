@@ -82,7 +82,7 @@ def quiz_bowl():
                 else:
                     print(RED + f"Incorrect! The correct answer is {current_question['correct_answer']}\n" + RESET)
 
-        print(f"You answered {score} out of {num_questions} questions correctly.")
+        print(f"You answered {score} out of {num_questions} questions correctly.\n")
 
     except sqlite3.Error as e:
         print("Error:", e)
